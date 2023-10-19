@@ -1,0 +1,129 @@
+body {
+  font-family: "Open ", sans-serif;
+  background-color: #f9fafc;
+  margin: auto;
+}
+.h1 {
+  font-weight: 550;
+  color: #000;
+}
+.header {
+  margin-top: 20px;
+  padding-bottom: 0;
+  margin: 0 10px;
+}
+ul {
+  list-style-type: none;
+  color: #69696a;
+  margin: 0;
+  padding: 0;
+  gap: 0.7em;
+}
+
+.section {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background-color: #000;
+  height: 35px;
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 110%;
+  margin-left: 20px 0;
+  justify-content: center;
+}
+.main {
+  border-left: solid 3px #69696a;
+  padding-left: 20px;
+  margin-left: 10px;
+  color: #69696a;
+}
+
+footer {
+  text-align: center;
+  background-color: rgba(274, 193, 162, 0.7);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding-left: 10px;
+  height: fit-content;
+  color: #69696a;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+}
+.left {
+  flex: 1;
+  text-align: left;
+}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-right: 20px;
+  gap: 15px;
+}
+.sec {
+  font-weight: bold;
+  color: #000;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+  }
+  .header ul {
+    display: flex;
+    align-items: center;
+  }
+  .circle {
+    width: 100px; 
+    height: 100px; 
+    background-color: #3498db; 
+    border-radius: 50%; 
+    position: absolute;
+    
+  }
+  .circle:nth-child(1) {
+    background-color: rgba(247, 136, 167, 0.6);
+    top: 1px; right:40px;
+    width: 180px;
+    height: 180px;
+    
+  }
+  .circle:nth-child(2) {
+    background-color: rgba(247, 193, 162, 0.7);
+    top: 30px; right: 0px;
+  }
+  .circle:nth-child(3) {
+    background-color: rgba(207, 130, 213, 0.6);
+    top: 100px; right: 0px;
+    height: 120px;
+    width: 120px;
+  }
+  .circle-container {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    flex: 1;
+    
+
+
+  }
+  .section-content {
+    flex: 1;
+  }
+  .section {
+    padding-top: 100px;
+    gap: 200px;
+  }
+  
+}
