@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Coin Counter</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Coin Counter</h1>
+    <form id="coin-form">
+      <label for="count">How many?</label>
+      <input type="number" id="count" min="1" />
+      <br />
+
+      <label for="coin-type">Which coin?</label>
+      <select id="coin-type">
+        <option value="Penny">Penny</option>
+        <option value="Nickel">Nickel</option>
+        <option value="Dime">Dime</option>
+        <option value="Quarter">Quarter</option>
+      </select>
+      <br />
+
+      <button type="button" onclick="makeMoney()">Add Coins</button>
+    </form>
+    <div id="coin-display"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
