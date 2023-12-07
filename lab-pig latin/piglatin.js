@@ -1,26 +1,21 @@
-function translate(word) {}
+function translate(word) {
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  word = word.toLowerCase();
+
+  if (vowels.includes(word[0])) {
+    return word + "way";
+  } else {
+    let vowelIndex = 0;
+    for (let i = 0; i < word.length; i++) {
+      if (vowels.includes(word[i])) {
+        vowelIndex = i;
+        break;
+      }
+    }
+
+    return word.slice(vowelIndex) + word.slice(0, vowelIndex) + "ay";
+  }
+}
 
 module.exports = translate;
-
-// pigLatin.test.js
-
-const translate = require("./pigLatin");
-
-describe("Pig Latin Translation", () => {
-  // Tests for words starting with different vowels
-  test('translates words starting with "a"', () => {
-    expect(translate("apple")).toBe("appleway");
-  });
-
-  test('translates words starting with "e"', () => {
-    expect(translate("else")).toBe("elseway");
-  });
-
-  // Tests for words starting with one consonant
-  test("translates words starting with one consonant", () => {
-    expect(translate("giraffe")).toBe("iraffegay");
-    // Add more test cases with different starting consonants
-  });
-
-  // Add more test cases for various scenarios
-});
