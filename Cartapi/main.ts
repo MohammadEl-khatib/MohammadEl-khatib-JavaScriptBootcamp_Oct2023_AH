@@ -8,7 +8,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 const client = new MongoClient(
-  "mongodb+srv://Moe:Modog1972@moe.lgfk2a5.mongodb.net"
+  
 );
 
 type Product = {
