@@ -7,9 +7,6 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-const client = new MongoClient(
-  
-);
 
 type Product = {
   product: string;
@@ -19,7 +16,7 @@ type Product = {
 
 type GetCartParams = {
   maxPrice?: number;
-  prefix?: string;
+  prefix?: string;''
   pageSize?: number;
 };
 
