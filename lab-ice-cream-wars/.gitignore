@@ -1,0 +1,72 @@
+# Dependency directories
+node_modules/
+
+# Vite build output
+dist
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cache directories (Vite, Babel, etc.)
+node_modules/.vite/
+node_modules/.vite_opt_cache/
+node_modules/.cache/
+node_modules/.babel-cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE and editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Optional Mac files
+.AppleDouble
+.LSOverride
+# Custom build directory
+/custom-build-directory/
+
+# Coverage directory
+/coverage
+
+# Storybook static build
+/storybook-static/
+
+# Tailwind CSS build output
+/tailwind-output.css
+
+# Configuration files
+.browserslistrc
+.prettierrc
+.editorconfig
+
+# Database files
+*.db
+*.sql
+
+# Other files and directories
+*.log
+*.tmp
+*.temp
+

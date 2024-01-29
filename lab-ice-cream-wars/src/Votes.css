@@ -1,0 +1,41 @@
+.votes {
+  text-align: center;
+}
+
+.votes button {
+  margin: 5px;
+  padding: 5px 15px;
+  background-color: #0e3c7e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.vote-result {
+  margin: 10px 0;
+}
+.votes .vote-result span {
+  color: white;
+}
+.votes .graph-bar {
+  background-color: #de8c91;
+}
+
+.votes .graph-bar.chocolate {
+  background-color: #4f2c2c;
+}
+.votes .graph-bar.vanilla {
+  background-color: #cbc0ac;
+}
+.votes .graph-bar.strawberry {
+  background-color: #de8c91;
+}
+
+.graph-bar {
+  height: 20px;
+  background-color: #0e3c7e;
+  margin: 5px 0;
+  display: inline-block;
+  color: white;
+}
