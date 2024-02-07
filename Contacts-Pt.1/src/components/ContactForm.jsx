@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ContactForm({ onAddContact }) {
+function ContactForm({ onAdd }) {
   const [contact, setContact] = useState({
     firstName: '',
     lastName: '',
@@ -10,20 +10,24 @@ function ContactForm({ onAddContact }) {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setContact((prevContact) => ({
-      ...prevContact,
+    setContact(prev => ({
+      ...prev,
       [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddContact(contact);
-    setContact({ firstName: '', lastName: '', phoneNumber: '', isFavorite: false });
+    if (!contact.firstName || !contact.lastName || !contact.phoneNumber) {
+      console.error('All fields are required.');
+      return;
+    }
+    onAdd({ ...contact, id: Date.now() });
+    setContact({ firstName: '', lastName: '', phoneNumber: '', isFavorite: false }); 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
+    <form onSubmit={handleSubmit}>
       <input
         name="firstName"
         type="text"

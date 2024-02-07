@@ -1,19 +1,16 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart as solidHeart, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 
-function ContactCard({ contact, onDelete }) {
+function ContactCard({ contact, onDelete, onUpdate }) {
   return (
     <div className="contact-card">
-      <div className="contact-info">
-        <h2>{contact.firstName} {contact.lastName}</h2>
+      <div>
+        <p>{contact.firstName} {contact.lastName}</p>
         <p>{contact.phoneNumber}</p>
       </div>
-      <div className="contact-actions">
-        <FontAwesomeIcon icon={contact.isFavorite ? solidHeart : regularHeart} className="icon favorite" />
-        <FontAwesomeIcon icon={faTrashAlt} className="icon delete" onClick={onDelete} />
-      </div>
+      <button onClick={() => onUpdate(contact.id)}>
+        {contact.isFavorite ? 'Unfavorite' : 'Favorite'}
+      </button>
+      <button onClick={() => onDelete(contact.id)}>Delete</button>
     </div>
   );
 }

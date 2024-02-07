@@ -1,11 +1,16 @@
 import React from 'react';
 import ContactCard from './ContactCard';
 
-function ContactList({ contacts, onDeleteContact }) {
+function ContactList({ contacts, onDelete, onUpdate }) {
   return (
     <div>
-      {contacts.map((contact, index) => (
-        <ContactCard key={index} contact={contact} onDelete={() => onDeleteContact(index)} />
+      {contacts.map(contact => (
+        <ContactCard
+          key={contact.id}
+          contact={contact}
+          onDelete={() => onDelete(contact.id)}
+          onUpdate={() => onUpdate(contact.id)}
+        />
       ))}
     </div>
   );
