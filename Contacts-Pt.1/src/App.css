@@ -1,0 +1,47 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #151b1d;
+  color: #ecf2f4;
+}
+
+.contact-form,
+.contact-list,
+.contact-card {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #2c3e50;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #34495e;
+}
+
+.contact-info h2,
+.contact-info p {
+  margin: 0;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.favorite {
+  color: #e74c3c;
+}
+
+.delete {
+  color: #e36940;
+}

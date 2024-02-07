@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #151b1d;
+  color: #ecf2f4;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #e36940;
+  color: #e36940;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e36940;
+  color: #151b1d;
+}
+
+input,
+label {
+  margin-bottom: 0.5em;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5em;
+}
